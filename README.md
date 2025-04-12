@@ -1,6 +1,3 @@
-# RVEF
-
-# Github Documentation
 
 ## convert_dicom_to_avi.ipynb
 
@@ -137,6 +134,11 @@
 　- **input_shape**  ： 輸入影像尺寸 (例如 (224,224,3))。  
 　- **batch_size**   ： 分類預測使用的批次大小（預設 2）。  
 　- **results_file** ： 輸出結果 CSV 檔案名稱，預設為 "masklab_results.csv"。
+
+ 
+## 分類器參考來源
+
+[https://github.com/raventan95/echo-view-classifier](https://github.com/raventan95/echo-view-classifier)
 
 ---
 
