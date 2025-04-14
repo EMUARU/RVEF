@@ -67,25 +67,6 @@
 
 ---
 
-## unet_rv.ipynb (版本 2)
-
-**檔案功能：**  
-　　使用已經以 LV 水平翻轉訓練得到的 U-Net 模型，對 AVI 格式影片進行分割，模擬 RV 二元分割任務。  
-　　主要流程包括：  
-　　- 讀取影片中的每一幀並轉為灰階後依據預處理設定 (Resize 至 112×112, ToTensor) 進行轉換。  
-　　- 利用 U-Net 模型產生 soft mask，依閾值（預設 0.5）二值化，再透過後處理（取最大連通區 + 凸包）精修遮罩。  
-　　- 將每部影片的所有幀遮罩合併存成 numpy 檔案，放置於預設資料夾 (precomputed_masks)。
-
-**主要參數：**  
-　- **seg_model_path** : 分割模型權重檔案 (unet_best_model_LV_HorizontalFlip_112.pth)。  
-　- **transform**      ： 影像預處理設定（Resize 至 112×112、轉為 Tensor）。  
-　- **threshold**      ： 二值化閾值（預設 0.5）。  
-　- **mask_dir**       ： 遮罩輸出資料夾（預設 precomputed_masks）。  
-　- **csv_file**       ： 影片清單 CSV 檔（a4c-video-dir/FileList.csv）。  
-　- **videos_dir**     ： 影片所在資料夾（a4c-video-dir/Videos）。
-
----
-
 ## rvef_test
 
 **檔案功能：**  
